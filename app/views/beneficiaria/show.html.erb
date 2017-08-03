@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @beneficiarium.nombre %>
+</p>
+
+<p>
+  <strong>Estatura:</strong>
+  <%= @beneficiarium.estatura %>
+</p>
+
+<p>
+  <strong>Complexion:</strong>
+  <%= @beneficiarium.complexion %>
+</p>
+
+<p>
+  <strong>Tez:</strong>
+  <%= @beneficiarium.tez %>
+</p>
+
+<%= link_to 'Edit', edit_beneficiarium_path(@beneficiarium) %> |
+<%= link_to 'Back', beneficiaria_path %>

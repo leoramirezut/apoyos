@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  estatura: 1.5
+  complexion: MyString
+  tez: MyString
+
+two:
+  nombre: MyString
+  estatura: 1.5
+  complexion: MyString
+  tez: MyString

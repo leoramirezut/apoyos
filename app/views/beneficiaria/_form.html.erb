@@ -1,0 +1,37 @@
+<%= form_with(model: beneficiarium, local: true) do |form| %>
+  <% if beneficiarium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(beneficiarium.errors.count, "error") %> prohibited this beneficiarium from being saved:</h2>
+
+      <ul>
+      <% beneficiarium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :beneficiarium_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estatura %>
+    <%= form.text_field :estatura, id: :beneficiarium_estatura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complexion %>
+    <%= form.text_field :complexion, id: :beneficiarium_complexion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tez %>
+    <%= form.text_field :tez, id: :beneficiarium_tez %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

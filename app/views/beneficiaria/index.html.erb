@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Beneficiaria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Estatura</th>
+      <th>Complexion</th>
+      <th>Tez</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beneficiaria.each do |beneficiarium| %>
+      <tr>
+        <td><%= beneficiarium.nombre %></td>
+        <td><%= beneficiarium.estatura %></td>
+        <td><%= beneficiarium.complexion %></td>
+        <td><%= beneficiarium.tez %></td>
+        <td><%= link_to 'Show', beneficiarium %></td>
+        <td><%= link_to 'Edit', edit_beneficiarium_path(beneficiarium) %></td>
+        <td><%= link_to 'Destroy', beneficiarium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Beneficiarium', new_beneficiarium_path %>
